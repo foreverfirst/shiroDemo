@@ -1,0 +1,22 @@
+server:
+  port: 7001
+
+spring:
+  main:
+      allow-bean-definition-overriding: true
+  data:
+    mongodb:
+      host: ${hostip:192.168.128.137}
+      port: 27017
+      #      username: perish
+      #      password: king
+      database: document
+
+shiro:
+  sessionManager:
+    sessionIdCookieEnabled: true
+    sessionIdUrlRewritingEnabled: true
+  unauthorizedUrl: /unauthorizedurl
+  web.enabled: true
+  successUrl: /index
+  loginUrl: /login
